@@ -8,7 +8,7 @@ import Foto from '../../img/map.png'
 export default function DishesOrder() {
   return (
     <div className='flex justify-between  items-end py-[10vh] px-[25vh]  ' style={{backgroundImage:`url(${Foto})`, height:`80vh`, width:`100%`,backgroundSize:'cover' }}>
-      <div className='bg-[#403C3B] p-8 rounded-lg text-white w-[55vh] h-[45vh]'>
+      <div className='bg-[#403C3B] p-8 rounded-lg text-white w-[45%]'>
         <div>
           <h1 className='text-3xl pb-4'>КОНТАКТЫ</h1>
           <hr />

@@ -21,7 +21,7 @@ export default function ColdFoods() {
 
 
   return (
-    <div className='flex justify-between gap-5 bg-[#403C3B] pb-6 px-5'>
+    <div className='flex justify-between gap-5 bg-[#403C3B] pb-6 px-5 w-[100%]'>
       {coldFoods.map((coldFood) => (
         <ColdFood coldFood={coldFood} />
       ))}

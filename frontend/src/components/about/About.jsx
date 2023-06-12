@@ -15,22 +15,22 @@ export default function About() {
                     </div>
                     <div className=' w-[60vh] flex flex-col gap-4 text-white '>
                       <div className='flex gap-4'>
-                      <div className='w-[22vh] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
-                            <BiDish className='w-[6vh] h-[6vh]'/>
+                      <div className='w-[100%] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
+                            <BiDish className='w-[100%] h-[20vh]'/>
                             <p>Свежайшие продукты</p>
                         </div>
-                        <div className='w-[22vh] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
-                            <SlEnergy className='w-[6vh] h-[6vh]' />
+                        <div className='w-[100%] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
+                            <SlEnergy className='w-[100%] h-[20vh]' />
                             <p>Быстрая доставка</p>
                         </div>
                       </div>
                         <div className='flex gap-4'>
-                        <div className='w-[22vh] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
-                            <GiCook className='w-[6vh] h-[6vh]' />
+                        <div className='w-[100%] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
+                            <GiCook className='w-[100%] h-[20vh]' />
                             <p>Лучшие повора</p>
                         </div>
-                        <div className='w-[22vh] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
-                            <BiDish className='w-[6vh] h-[6vh]'/>
+                        <div className='w-[100%] h-[22vh] bg-[#504B4AE5] flex flex-col items-center py-14 hover:text-green-400'>
+                            <BiDish className='w-[100%] h-[20vh]'/>
                             <p>Лучшие блюдо</p>
                         </div>
                         </div>
