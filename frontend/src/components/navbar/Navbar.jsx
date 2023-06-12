@@ -75,7 +75,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full bg-[#403C3B] px-4 py-3 h-20 flex items-center sm:w-full">
-      <div className="w-full flex justify-between items-center text-white">
+      <div className="w-full flex justify-between items-center text-white ml-10">
         <div className="flex items-center gap-20">
           {/* Hamburger Menu */}
           <div className="flex items-center sm:hidden">
