@@ -1,4 +1,6 @@
+
 import Condition from "./components/navbar/order/Condition";
+import Order from "./components/navbar/order/Order";
 import Restaurant from "./components/Restaurant";
 
 
@@ -10,6 +12,7 @@ function App() {
     <div className="App">
    <Restaurant/>
    {/* <Condition/> */}
+ 
     </div>
   );
 }

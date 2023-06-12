@@ -5,7 +5,7 @@ export default function ColdFood({ coldFood }) {
   return (
     <>
       <div className='text-white w-[420px] border-2 p-4 rounded-xl bg-gray-800'>
-        <img src={coldFood.img} className='w-[420px] h-[220px] rounded-lg' alt="" />
+        <img src={coldFood.img} className='w-[100%] h-[30vh] rounded-lg' alt="" />
         <div className='flex justify-between items-center py-2'>
           <h3 className='text-xl font-bold'>{coldFood.nameFood}</h3>
           <p>{coldFood.weight}</p>

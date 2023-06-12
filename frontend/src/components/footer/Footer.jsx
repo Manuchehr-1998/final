@@ -3,7 +3,7 @@ import logo from '../../img/LOGO.png'
 import { FaArrowUp } from 'react-icons/fa'
 export default function Footer() {
     return (
-        <div className='bg-[#403C3B] flex items-center h-[28vh] w-full text-white gap-[100px] p-[4vh]'>
+        <div className='bg-[#403C3B] flex items-center  w-full text-white gap-[100px] p-[2vh]'>
             <div className=' rounded-full bg-white text-black ml-20' >
                 <button className='p-4'><FaArrowUp/></button>
             </div>

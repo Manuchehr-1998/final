@@ -8,7 +8,7 @@ import Foto from '../../img/map.png'
 export default function DishesOrder() {
   return (
     <div className='flex justify-between  items-end py-[10vh] px-[25vh]  ' style={{backgroundImage:`url(${Foto})`, height:`80vh`, width:`100%`,backgroundSize:'cover' }}>
-      <div className='bg-[#403C3B] p-8 rounded-lg text-white w-[55vh] h-[45vh]'>
+      <div className='bg-[#403C3B] p-8 rounded-lg text-white w-[40%]'>
         <div>
           <h1 className='text-3xl pb-4'>КОНТАКТЫ</h1>
           <hr />
@@ -29,7 +29,7 @@ export default function DishesOrder() {
         </div>
         <hr />
         <div className='flex items-center p-4 gap-10'>
-          <button className='bg-green-400 rounded-xl'>ЗАБРОНИРОВАТЬ СТОЛ</button>
+          <button className='bg-green-400 rounded-xl p-2'>ЗАБРОНИРОВАТЬ СТОЛ</button>
           <div>
             <h1 className='text-xl font-bold'>+7 (917) 510-57-59</h1>
             <p>Звоните или оставляйте заявку</p>
