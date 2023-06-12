@@ -46,22 +46,18 @@ export default function ColdFood({ coldFood }) {
   
   return (
     <>
-     <Slider {...settings}>
-      {coldFood.map((food) => (
-        <div key={food.id} className='slide text-white w-[30%] border-2 p-4 rounded-xl bg-gray-800'>
-          <img src={food.img} className='w-[100%] h-[30vh] rounded-lg' alt="" />
-          <div className='flex justify-between items-center py-2'>
-            <h3 className='text-xl font-bold'>{food.nameFood}</h3>
-            <p>{food.weight}</p>
-          </div>
-          <p>{food.about}</p>
-          <div className='flex gap-11'>
-            <h2 className='text-3xl font-bold'>{food.price}</h2>
-            <button className='bg-green-400 text-white  rounded-lg flex gap-2 items-center p-2'>В корзину <TiShoppingCart/></button>
-          </div>
+      <div className='text-white w-[420px] border-2 p-4 rounded-xl bg-gray-800'>
+        <img src={coldFood.img} className='w-[100%] h-[30vh] rounded-lg' alt="" />
+        <div className='flex justify-between items-center py-2'>
+          <h3 className='text-xl font-bold'>{coldFood.nameFood}</h3>
+          <p>{coldFood.weight}</p>
         </div>
-      ))}
-    </Slider>
+        <p>{coldFood.about}</p>
+        <div className='flex gap-11'>
+          <h2 className='text-3xl font-bold'>{coldFood.price}</h2>
+          <button className='bg-green-400 text-white  rounded-lg flex gap-2 items-center p-2'>В корзину <TiShoppingCart/></button>
+        </div>
+      </div>
     </>
    
   );
