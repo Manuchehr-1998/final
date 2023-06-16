@@ -1,14 +1,18 @@
-import Restaurant from "./components/Restaurant";
-
+import Layout from "./components/Layout/Layout";
 
 
 
 
 function App() {
   return (
-    <div className="App">
-   <Restaurant/>
+   <div className="xs:overflow-x-hidden ">
+    <div className="conteiner w-[100%] m-auto xs:w-[100%] xs:m-auto">
+
+     <Layout/> 
     </div>
+
+   </div>
+  
   );
 }
 
