@@ -24,7 +24,6 @@ export default function CardProduct() {
             <div>
               {
                 
-                <h1>wdwa</h1>
               }
             </div>
           </div>

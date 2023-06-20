@@ -1,4 +1,3 @@
-import Category from '../Category';
 import ColdFoods from '../foods/coldFood/ColdFoods';
 import Dishs from '../foods/dish/Dishs';
 import Drinks from '../foods/drink/Drinks';
@@ -10,7 +9,6 @@ import Soups from '../foods/soup/Soups';
 
 
 export default function Menu() {
-
     return (
         <div className="w-full bg-[#403C3B]">
         

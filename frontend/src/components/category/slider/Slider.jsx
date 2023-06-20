@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import foto from '../../../assets/slider.png';
 import foto1 from '../../../assets/stol2.jpeg';
 import foto2 from '../../../assets/drinks (6).jpg';
-import { GrFormPrevious, GrNext } from 'react-icons/gr';
 
 export default function Slider() {
   const [activeIndex, setActiveIndex] = useState(0);

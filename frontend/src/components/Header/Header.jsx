@@ -4,6 +4,7 @@ import Calling from "../../assets/Calling.svg";
 import burger from "../../assets/burger.svg";
 import Buy from "../../assets/Buy.svg";
 import ModalBasked from "./Modal";
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -15,9 +16,11 @@ const Header = () => {
   return (
     <nav className="bg-[#403C3B] border-gray-200 w-[100%]">
       <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">
+        <Link to='/'>
         <div>
           <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
         </div>
+        </Link>
         <div className="flex w-[80%] items-center">
           <div className="relative  w-full">
             <div className="absolute pt-2 left-0 flex items-center pl-3 pointer-events-none">
@@ -45,7 +48,7 @@ const Header = () => {
           </div>
           <div className="flex w-[100%] items-center">
             <button className="bg-green-400 rounded-full w-8 h-8 flex items-center justify-center">
-              <img src={Calling} />
+              <img src={Calling} alt="" />
             </button>
             <div className="ml-2  ">
               <p className="text-[#CFCFCF]">Контакты:</p>
@@ -69,7 +72,7 @@ const Header = () => {
         </div>
       </div>
       {/* MEdiy */}
-      <div className="xs:block xs:flex xs:flex-wrap xs:items-center xs:gap-2 justify-around xs:w-[95%]  xs:m-auto xs:p-4  hidden">
+      <div className="xs:flex xs:flex-wrap xs:items-center xs:gap-2 justify-around xs:w-[95%]  xs:m-auto xs:p-4  hidden">
         <div className="w-[30%] p-2">
          <img src={burger} alt="" />
         </div>
@@ -88,9 +91,6 @@ const Header = () => {
             </div>
           )}
           <div className="h-6 w-0.5 bg-white hidden sm:block"></div>
-          {/* <span className="rounded-full bg-white text-[12px] text-black w-4 h-4 flex items-center justify-center px-1">
-            0
-          </span> */}
         </div>
         <div className="xs:w-[100%] items-center">
           <div className="relative  w-full">
