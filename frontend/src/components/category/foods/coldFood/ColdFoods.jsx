@@ -10,6 +10,7 @@ import ColdFood from './ColdFood';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 
 export default function ColdFoods() {
   const coldFoods = [
@@ -44,7 +45,9 @@ export default function ColdFoods() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {coldFoods.map((coldFood) => (
+          <Link to={`/CardProduct/${coldFood.id}`}>
           <ColdFood coldFood={coldFood} key={coldFood.id} />
+          </Link>
         ))}
       </Slider>
     </div>

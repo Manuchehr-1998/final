@@ -1,21 +1,9 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import Home from '../pages/Home'
-import CardProduct from '../components/category/CardProduct'
-import DeliveryContacts from '../pages/DeliveryСontacts'
-import ShoppingCart from '../pages/ShoppingCart'
-import Stock from '../components/category/stock/Stock'
+import { lazy } from "react";
 
-const Routers = () => {
-  return (   
-     <Routes>
-       <Route path='/home' element={<Home/>}/>
-       <Route path='/card-product' element={<CardProduct/>}/>
-       <Route path='/delivery-contacts' element={<DeliveryContacts/>}/>
-       <Route path='/shopping-cart' element={<ShoppingCart/>}/>
-       <Route path='/stock' element={<Stock/>}/>
-     </Routes>
-  )
-}
 
-export default Routers
+export const Layout =lazy(()=> import("../components/Layout/Layout"))
+export const Home =lazy(()=> import("../pages/Home"))
+export const CardProduct =lazy(()=> import("../components/category/CardProduct"))
+export const DeliveryContacts =lazy(()=> import("../pages/DeliveryСontacts"))
+export const ShopingCart =lazy(()=> import("../pages/ShoppingCart"))
+export const Stock =lazy(()=> import("../components/category/stock/Stock"))

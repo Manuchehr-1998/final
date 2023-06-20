@@ -26,10 +26,6 @@ export default function Slider() {
     setActiveIndex((prevIndex) => (prevIndex === lastIndex ? 0 : prevIndex + 1));
   };
 
-  const handlePrevSlide = () => {
-    const lastIndex = 2;
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? lastIndex : prevIndex - 1));
-  };
 
   return (
     <div className="relative">
@@ -38,22 +34,6 @@ export default function Slider() {
         alt="slider"
         className="h-[400px] w-full object-cover sm:h-[660px]"
       />
-      <div className="hidden absolute top-4 left-4 items-center gap-4 sm:flex">
-        <button
-          className="bg-white text-white px-2 py-1 rounded"
-          onClick={handlePrevSlide}
-        >
-          <GrFormPrevious />
-        </button>
-      </div>
-      <div className="hidden absolute top-4 right-4 items-center gap-4 sm:flex">
-        <button
-          className="bg-white text-white px-2 py-1 rounded"
-          onClick={handleNextSlide}
-        >
-          <GrNext />
-        </button>
-      </div>
       <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
         <span
           className={`block h-1 cursor-pointer rounded-2xl transition-all bg-white/50 w-4 ${activeIndex === 0 ? 'bg-white w-8' : ''

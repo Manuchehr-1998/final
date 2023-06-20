@@ -1,25 +1,31 @@
 import React from 'react'
-import Footer from '../footer/Footer'
-import Header from '../Header/Header'
 import Category from './Category'
 import DishesOrder from './dishesOrder/DishesOrder'
 import ColdFoods from './foods/coldFood/ColdFoods'
 import { MdArrowBackIos } from 'react-icons/md'
+import { Link, useParams } from 'react-router-dom'
 
 export default function CardProduct() {
+  const params = useParams()
+  console.log(params.id);
   return (
     <div className='bg-[#403C3B]'>
-      <Header />
       <Category />
       <div className='w-[100%]'>
         <div>
+            <Link to="/">
           <div className='flex text-white gap-2 py-8 pl-8'>
-            <button className='bg-green-400 rounded-full p-1 '><MdArrowBackIos className='text-white' /></button>
+            <button className='bg-green-400 rounded-full p-1 '><MdArrowBackIos className='text-white' /> </button>
             <p>Вернуться назад</p>
           </div>
+            </Link>
+            
           <div className='rounded-xl flex '>
             <div>
-              {}
+              {
+                
+                <h1>wdwa</h1>
+              }
             </div>
           </div>
         </div>
@@ -36,7 +42,7 @@ export default function CardProduct() {
         </div>
       </div>
       <DishesOrder />
-      <Footer />
+     
     </div>
   )
 }

@@ -31,7 +31,7 @@ const Category = () => {
     <div className="flex justify-evenly w-[100%] h-[10vh] items-center bg-[#403C3B] border-b-2 border-gray-600 ">
       {categoryData.map((item, index) => (
         <div key={index}>
-          <h6 className="text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9">
+          <h6  className="text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-[4vh]">
             {item.text}
           </h6>
         </div>
