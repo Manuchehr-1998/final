@@ -1,10 +1,10 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from '../pages/Home'
-import CardProduct from '../pages/CardProduct'
+import CardProduct from '../components/category/CardProduct'
 import DeliveryContacts from '../pages/DeliveryСontacts'
 import ShoppingCart from '../pages/ShoppingCart'
-import Stock from '../pages/Stock'
+import Stock from '../components/category/stock/Stock'
 
 const Routers = () => {
   return (   
