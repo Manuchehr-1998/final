@@ -43,7 +43,7 @@ const Header = () => {
               type="text"
               id="search-navbar"
               className="block w-[80%] p-2 pl-10 text-sm rounded-md bg-[#504B4A] text-[#CFCFCF]"
-              placeholder="Виберите меню"
+              placeholder="Выберите меню"
             />
           </div>
           <div className="flex w-[100%] items-center">
@@ -114,7 +114,7 @@ const Header = () => {
               type="text"
               id="search-navbar"
               className="block w-[100%] p-2 pl-10 text-sm rounded-md bg-[#504B4A] text-[#CFCFCF]"
-              placeholder="Виберите меню"
+              placeholder="Выберите меню"
             />
           </div>
         </div>
