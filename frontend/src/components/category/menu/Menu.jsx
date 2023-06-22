@@ -11,7 +11,6 @@ import Soups from '../foods/soup/Soups';
 export default function Menu() {
     return (
         <div className="w-full bg-[#403C3B]">
-        
             <div>
                 <div
                     className='flex items-center pl-8 py-8 bg-[#403C3B] text-4xl gap-5'
