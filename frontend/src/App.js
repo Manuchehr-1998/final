@@ -4,9 +4,9 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-blue-900">
-        Chokadi
+        Hi there!
       </h1>
-          </div>
+    </div>
   );
 }
 
