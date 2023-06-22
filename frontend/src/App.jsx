@@ -3,6 +3,7 @@ import { CardProduct, DeliveryContacts, Layout, ShopingCart, Stock } from "./rou
 import Home from "./pages/Home";
 import { Suspense } from "react";
 import { Loader } from "./components/Loader/Loader";
+import Trash from "./pages/Trash";
 
 
 
@@ -46,8 +47,15 @@ function App() {
                   <Stock/>
                 </Suspense>
        }/>
+       <Route path="Trash"  element={
+                <Suspense fallback={<Loader/>}>
+                  <Trash/>
+                </Suspense>
+       }/>
 
        </Route>
+       
+   
      </Routes>
     </div>
 
