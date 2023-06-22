@@ -81,7 +81,7 @@ const Header = () => {
         </div>
         <div className="xs:flex xs:flex-wrap xs:gap-4 xs:justify-center xs:items-center bg-green-400 p-1 rounded-2xl w-[30%]">
           <img src={Buy} alt="" />
-          <hr class="w-14 h-[1px] bg-[#E5E5E5] border-0 rounded "></hr>
+          <hr className="w-14 h-[1px] bg-[#E5E5E5] border-0 rounded "></hr>
           <button className="text-white text-[12px]" onClick={handleModalClick}>
             Корзина
           </button>
