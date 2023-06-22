@@ -29,7 +29,7 @@ export default function Fishs() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
@@ -46,7 +46,7 @@ export default function Fishs() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {fishs.map((fish) => (
-          <Fish fish={fish}  key={fish.id}/>
+          <Fish fish={fish} key={fish.id} />
         ))}
       </Slider>
     </div>)

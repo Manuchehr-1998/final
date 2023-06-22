@@ -5,6 +5,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { BsInstagram, BsYoutube } from 'react-icons/bs';
 import { MdWhatsapp } from 'react-icons/md';
 import Foto from '../../../assets/map.png';
+import { Link } from 'react-router-dom';
 
 export default function DishesOrder() {
   return (
@@ -30,7 +31,9 @@ export default function DishesOrder() {
         </div>
         <hr />
         <div className="flex flex-col sm:flex-row items-center p-4 gap-6">
-          <button className="bg-green-400 rounded-xl p-2 text-white hover:bg-white hover:text-green-400">ЗАБРОНИРОВАТЬ СТОЛ</button>
+        <Link to='OrderTable'>
+        <button className="bg-green-400 rounded-xl p-2 text-white hover:bg-white hover:text-green-400">ЗАБРОНИРОВАТЬ СТОЛ</button>
+        </Link>
           <div>
             <h1 className="text-xl font-bold">+7 (917) 510-57-59</h1>
             <p>Звоните или оставляйте заявку</p>

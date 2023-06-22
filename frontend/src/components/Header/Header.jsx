@@ -3,7 +3,7 @@ import logo from "../../assets/LOGO.png";
 import Calling from "../../assets/Calling.svg";
 import burger from "../../assets/burger.svg";
 import Buy from "../../assets/Buy.svg";
-import ModalBasked from "./Modal";
+import ModalBasked from "./ModalBasked";
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
   const handleModalClick = () => {
     setModalOpen(!modalOpen);
   };
-  console.log(handleModalClick);
+  
   return (
     <nav className="bg-[#403C3B] border-gray-200 w-[100%]">
       <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">
@@ -81,7 +81,7 @@ const Header = () => {
         </div>
         <div className="xs:flex xs:flex-wrap xs:gap-4 xs:justify-center xs:items-center bg-green-400 p-1 rounded-2xl w-[30%]">
           <img src={Buy} alt="" />
-          <hr class="w-14 h-[1px] bg-[#E5E5E5] border-0 rounded "></hr>
+          <hr className="w-14 h-[1px] bg-[#E5E5E5] border-0 rounded "></hr>
           <button className="text-white text-[12px]" onClick={handleModalClick}>
             Корзина
           </button>

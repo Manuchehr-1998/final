@@ -54,10 +54,10 @@ export default function Slider() {
         {activeIndex === 0
           ? 'ДОСТАВКА ВКУСНЕЙШИХ БЛЮД ЗА 60 МИНУТ'
           : activeIndex === 1
-            ? 'ЗАКАЗ СТОЛ ДАЖЕ СИДЯ ДОМА'
+            ? 'БРОНИРОВАТЬ СТОЛ ДАЖЕ СИДЯ ДОМА'
             : 'ХОЛОДНЫЕ НАПИТКИ И СОКИ'}
       </h1>
-      <button className="bg-green-400 text-white absolute top-[280px] px-2 py-2 ml-28 italic font-normal text-xl text-center transform -rotate-6 sm:text-2xl sm:ml-[280px] sm:top-[360px]">
+      <button className="bg-green-400 text-white absolute top-[280px] px-2 py-2 ml-24 italic font-normal text-xl text-center transform -rotate-6 sm:text-2xl sm:ml-[280px] sm:top-[360px]">
         ЕЩЁ НЕ ПРОБОВАЛ?
       </button>
     </div>

@@ -14,13 +14,13 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Drinks() {
 
   const drinks = [
-    { id: crypto.randomUUID(), img: cold1, nameFood: 'Вишневый', weight: '1 стакан', about: 'lorem', price: '25c' },
-    { id: crypto.randomUUID(), img: cold2, nameFood: 'Мохито', weight: '1 стакан', about: 'lorem', price: '17c' },
-    { id: crypto.randomUUID(), img: cold3, nameFood: 'Витаминный', weight: '1 стакан', about: 'lorem', price: '28c' },
-    { id: crypto.randomUUID(), img: cold4, nameFood: 'Малиновый', weight: '1 стакан', about: 'lorem', price: '12c' },
-    { id: crypto.randomUUID(), img: cold5, nameFood: 'Клубничный', weight: '1 стакан', about: 'lorem', price: '30c' },
-    { id: crypto.randomUUID(), img: cold6, nameFood: 'Лайм', weight: '1 стакан', about: 'lorem', price: '22c' },
-    { id: crypto.randomUUID(), img: cold8, nameFood: 'Мультифрукт', weight: '1 стакан', about: 'lorem', price: '35c' },
+    { id: crypto.randomUUID(), img: cold1, nameFood: 'Вишневый', weight: '1 стакан', about: 'Свежий, сладкий, освежающий вишневый компот.', price: '25c' },
+    { id: crypto.randomUUID(), img: cold2, nameFood: 'Мохито', weight: '1 стакан', about: 'Освежающие, тропические, ароматные  мохито.', price: '17c' },
+    { id: crypto.randomUUID(), img: cold3, nameFood: 'Витаминный', weight: '1 стакан', about: 'Сочный, освежающий, питательный  компот.', price: '28c' },
+    { id: crypto.randomUUID(), img: cold4, nameFood: 'Малиновый', weight: '1 стакан', about: 'Ароматный, сладкий, освежающий  компот.', price: '12c' },
+    { id: crypto.randomUUID(), img: cold5, nameFood: 'Клубничный', weight: '1 стакан', about: 'Свежий, ягодный, ароматный компот.', price: '30c' },
+    { id: crypto.randomUUID(), img: cold6, nameFood: 'Лайм', weight: '1 стакан', about: 'Освежающие, кисло-сладкие, ароматные  лайм.', price: '22c' },
+    { id: crypto.randomUUID(), img: cold8, nameFood: 'Мультифрукт', weight: '1 стакан', about: 'Сочный, многофруктовый, освежающий компот.', price: '35c' },
   ];
 
 
@@ -29,7 +29,7 @@ export default function Drinks() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
@@ -46,7 +46,7 @@ export default function Drinks() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {drinks.map((drink) => (
-          <Drink drink={drink} key={drink.id}/>
+          <Drink drink={drink} key={drink.id} />
         ))}
       </Slider>
     </div>)

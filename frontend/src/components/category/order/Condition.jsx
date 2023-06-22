@@ -1,14 +1,11 @@
 import React from 'react'
 import foto from '../../../assets/map1.png'
-import Footer from '../../footer/Footer'
-import Header from '../../Header/Header'
 import Category from '../Category'
 import Accordions from './Accordions'
 
 export default function Condition() {
     return (
         <div>
-            <Header />
             <Category />
             <div>
                 <div className='bg-[#484545]'>
@@ -42,7 +39,6 @@ export default function Condition() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

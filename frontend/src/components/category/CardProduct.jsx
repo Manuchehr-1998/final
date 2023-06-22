@@ -13,17 +13,17 @@ export default function CardProduct() {
       <Category />
       <div className='w-[100%]'>
         <div>
-            <Link to="/">
-          <div className='flex text-white gap-2 py-8 pl-8'>
-            <button className='bg-green-400 rounded-full p-1 '><MdArrowBackIos className='text-white' /> </button>
-            <p>Вернуться назад</p>
-          </div>
-            </Link>
-            
+          <Link to="/">
+            <div className='flex text-white gap-2 py-8 pl-8'>
+              <button className='bg-green-400 rounded-full p-1 '><MdArrowBackIos className='text-white' /> </button>
+              <p>Вернуться назад</p>
+            </div>
+          </Link>
+
           <div className='rounded-xl flex '>
             <div>
               {
-                
+
               }
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function CardProduct() {
         </div>
       </div>
       <DishesOrder />
-     
+
     </div>
   )
 }
