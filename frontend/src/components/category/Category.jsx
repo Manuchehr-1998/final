@@ -1,43 +1,16 @@
-import React from "react";
+import React from 'react'
 
-const Category = () => {
-  const categoryData = [
-    {
-      text: "Холодные закуски",
-    },
-    {
-      text: "Горячие закуски",
-    },
-    {
-      text: "Мясные блюда",
-    },
-    {
-      text: "Супы",
-    },
-    {
-      text: "Рыбные блюда",
-    },
-    {
-      text: "Гриль меню",
-    },
-    {
-      text: "Фирменные блюда",
-    },
-    {
-      text: "Напитки",
-    },
-  ];
+export default function Category() {
   return (
     <div className="flex justify-evenly w-[100%] h-[10vh] items-center bg-[#403C3B] border-b-2 border-gray-600 ">
-      {categoryData.map((item, index) => (
-        <div key={index}>
-          <h6  className="text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-6">
-            {item.text}
-          </h6>
-        </div>
-      ))}
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Холодные закуски</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Горячие закуски</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Мясные блюда</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Супы</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Рыбные блюда</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Гриль меню</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Фирменные блюда</button>
+      <button className='text-[#CFCFCF] font-semibold hover:text-white hover:border-b-4 border-green-500 duration-300 py-9'>Напитки</button>
     </div>
-  );
-};
-
-export default Category;
+  )
+}

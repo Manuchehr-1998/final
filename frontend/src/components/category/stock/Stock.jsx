@@ -1,15 +1,13 @@
 import React from 'react'
-import Footer from '../../footer/Footer'
-import Header from '../../Header/Header'
 import Category from '../Category'
 import DishesOrder from '../dishesOrder/DishesOrder'
+import Product from './Product'
 
 
 
-export default function Stock() {
+export default function Stock({ stock }) {
   return (
     <div className='bg-[#403C3B]'>
-      <Header />
       <Category />
       <div>
         <div
@@ -18,20 +16,10 @@ export default function Stock() {
           <h1 className="text-white font-bold">АКЦИИ</h1>
         </div>
         <div>
-          <div className='rounded-xl text-white w-[25%]'>
-            <img  className='w-[100%]' alt="" />
-            <p></p>
-            <p>Самое время попробовать «Сырную» пиццу, «Маргариту»,
-              пиццу «Овощи и грибы», Пасту Четыре сыра, Томатный
-              суп с гренками, Грибной Стартер, Рулетики с сыром,
-              Картофель из печи, Картофельные оладьи или Греческий
-              салат. Выберите свой вкус!</p>
-            <p className='text-green-400'>до 31 июля.</p>
-          </div>
+         <Product/>
         </div>
       </div>
       <DishesOrder />
-      <Footer />
     </div>
   )
 }

@@ -12,14 +12,14 @@ const Header = () => {
   const handleModalClick = () => {
     setModalOpen(!modalOpen);
   };
-  console.log(handleModalClick);
+
   return (
     <nav className="bg-[#403C3B] border-gray-200 w-[100%]">
       <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">
         <Link to='/'>
-        <div>
-          <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
-        </div>
+          <div>
+            <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          </div>
         </Link>
         <div className="flex w-[80%] items-center">
           <div className="relative  w-full">
@@ -74,7 +74,7 @@ const Header = () => {
       {/* MEdiy */}
       <div className="xs:flex xs:flex-wrap xs:items-center xs:gap-2 justify-around xs:w-[95%]  xs:m-auto xs:p-4  hidden">
         <div className="w-[30%] p-2">
-         <img src={burger} alt="" />
+          <img src={burger} alt="" />
         </div>
         <div className="xs:w-[30%]">
           <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
@@ -124,3 +124,4 @@ const Header = () => {
 };
 
 export default Header;
+
