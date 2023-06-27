@@ -29,6 +29,7 @@ const slice = createSlice({
       },
       decProduct: (state, action) =>{
          let product = state.basket.find(elem => elem.product.id === action.payload)
+         if(product.quantity>0)
          product.quantity--;
          state.summa = state.basket.reduce((acc, curr) => acc + curr.product.price * curr.quantity, 0)
       },

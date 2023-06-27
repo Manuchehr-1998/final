@@ -12,7 +12,7 @@ const Header = () => {
   const handleModalClick = () => {
     setModalOpen(!modalOpen);
   };
-  console.log(handleModalClick);
+
   return (
     <nav className="bg-[#403C3B] border-gray-200 w-[100%]">
       <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">

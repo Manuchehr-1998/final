@@ -1,16 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decProduct, incProduct, removeProduct } from "../Reduser/basket";
-import ModalBasked from "../components/Header/Modal";
 
 const Trash = () => {
     const basket=useSelector(({basket})=> basket.basket)
    const dispatch =useDispatch()
     
-  return (
+   return (
     <div className="w-[100%] m-auto">
       <table>
-        <caption>Korsina</caption>
+        <caption>Korsin</caption>
         {
          basket.map((elem)=>(
             <thead>
@@ -36,6 +35,6 @@ const Trash = () => {
       </table>
     </div>
   );
-};
+}
 
 export default Trash;
