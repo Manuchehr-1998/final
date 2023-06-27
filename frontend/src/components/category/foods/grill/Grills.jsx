@@ -15,13 +15,13 @@ import { Link } from 'react-router-dom'
 export default function Grills() {
 
     const grills = [
-        { id: crypto.randomUUID(), img: cold1, nameFood: 'Мясогамбр', weight: '330гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold1, nameFood: 'Мясогамбр', weight: '330гр', about: 'lorem', price: '55c' },
         { id: crypto.randomUUID(), img: cold2, nameFood: 'Стейкокреветка', weight: '400гр', about: 'lorem', price: '60c' },
-        { id: crypto.randomUUID(), img: cold3, nameFood: 'Грильгамбр', weight: '250гр', about: 'lorem', price: '28c' },
-        { id: crypto.randomUUID(), img: cold4, nameFood: 'Стейкгамбр', weight: '330гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold5, nameFood: 'Грильпрон', weight: '240гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold6, nameFood: 'Мясосате', weight: '400гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold8, nameFood: 'Мясопрон', weight: '330гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold3, nameFood: 'Грильгамбр', weight: '250гр', about: 'lorem', price: '49c' },
+        { id: crypto.randomUUID(), img: cold4, nameFood: 'Стейкгамбр', weight: '330гр', about: 'lorem', price: '65c' },
+        { id: crypto.randomUUID(), img: cold5, nameFood: 'Грильпрон', weight: '240гр', about: 'lorem', price: '48c' },
+        { id: crypto.randomUUID(), img: cold6, nameFood: 'Мясосате', weight: '400гр', about: 'lorem', price: '63c' },
+        { id: crypto.randomUUID(), img: cold8, nameFood: 'Мясопрон', weight: '330гр', about: 'lorem', price: '45c' },
     ];
 
     const settings = {

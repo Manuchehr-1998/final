@@ -16,11 +16,11 @@ export default function HotFoods() {
 
   const hotFoods = [
     { id: crypto.randomUUID(), img: cold1, nameFood: 'Фалафель', weight: '330гр', about: 'Фалафель - национальное блюдо Израиля', price: '35c' },
-    { id: crypto.randomUUID(), img: cold2, nameFood: 'Буррито', weight: '400гр', about: 'Сочное, ароматное, многослойное, пикантное', price: '60c' },
+    { id: crypto.randomUUID(), img: cold2, nameFood: 'Буррито', weight: '400гр', about: 'Сочное, ароматное, многослойное, пикантное', price: '26c' },
     { id: crypto.randomUUID(), img: cold3, nameFood: 'Самоса', weight: '250гр', about: ' Жареное или печёное тесто с начинкой.', price: '28c' },
-    { id: crypto.randomUUID(), img: cold4, nameFood: 'Бейкон', weight: '330гр', about: 'Пикантный мясной деликатес', price: '35c' },
-    { id: crypto.randomUUID(), img: cold5, nameFood: 'Хачапури', weight: '240гр', about: 'Куриные фрикадельки с соусом', price: '35c' },
-    { id: crypto.randomUUID(), img: cold6, nameFood: 'Донат', weight: '1 порция', about: 'Мини-пицца с ветчиной и грибами', price: '45c' },
+    { id: crypto.randomUUID(), img: cold4, nameFood: 'Бейкон', weight: '330гр', about: 'Пикантный мясной деликатес', price: '36c' },
+    { id: crypto.randomUUID(), img: cold5, nameFood: 'Хачапури', weight: '240гр', about: 'Куриные фрикадельки с соусом', price: '45c' },
+    { id: crypto.randomUUID(), img: cold6, nameFood: 'Донат', weight: '1 порция', about: 'Мини-пицца с ветчиной и грибами', price: '52c' },
     { id: crypto.randomUUID(), img: cold8, nameFood: 'Фокачча', weight: '330гр', about: 'Горячий куринный и сочный котлет', price: '35c' },
   ];
 

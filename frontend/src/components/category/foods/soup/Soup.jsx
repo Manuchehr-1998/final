@@ -1,7 +1,11 @@
 import React from 'react'
 import { TiShoppingCart } from 'react-icons/ti'
+import { addProduct } from '../../../../Reduser/basket'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 export default function Soup({ soup }) {
+  const dispatch = useDispatch()
   return (
     <>
       <div className='text-white  border-2 p-4 rounded-xl bg-gray-800 m-3'>
@@ -13,7 +17,9 @@ export default function Soup({ soup }) {
         <p>{soup.about}</p>
         <div className='flex justify-between items-center py-2'>
           <h2 className='text-3xl font-bold'>{soup.price}</h2>
-          <button className='bg-green-400 text-white  rounded-lg flex gap-2 items-center p-2'>В корзину <TiShoppingCart/></button>
+          <Link to='trash' onClick={() => dispatch(addProduct(soup))}>
+            <button className='bg-green-400 text-white  rounded-lg flex gap-2 items-center p-2'>В корзину <TiShoppingCart /></button>
+          </Link>
         </div>
       </div>
     </>

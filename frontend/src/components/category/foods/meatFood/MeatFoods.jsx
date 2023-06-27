@@ -15,12 +15,12 @@ import { Link } from 'react-router-dom'
 export default function MeatFoods() {
 
   const meatFoods = [
-    { id: crypto.randomUUID(), img: cold1, nameFood: 'Шашлык', weight: '330гр', about: 'Сочный, ароматный, пикантный шашлык.', price: '35c' },
+    { id: crypto.randomUUID(), img: cold1, nameFood: 'Шашлык', weight: '330гр', about: 'Сочный, ароматный, пикантный шашлык.', price: '45c' },
     { id: crypto.randomUUID(), img: cold2, nameFood: 'Кебаб', weight: '400гр', about: 'Ароматный, пряный, сочный кебаб.', price: '60c' },
-    { id: crypto.randomUUID(), img: cold3, nameFood: 'Куринный', weight: '250гр', about: 'Нежный, сочный, ароматный куриный шашлык.', price: '28c' },
-    { id: crypto.randomUUID(), img: cold4, nameFood: 'Стейк', weight: '330гр', about: 'Сочный, нежный, ароматный стейк.', price: '35c' },
-    { id: crypto.randomUUID(), img: cold5, nameFood: 'Т-боун', weight: '240гр', about: 'Аппетитный, сочный, горячий Т-боун.', price: '35c' },
-    { id: crypto.randomUUID(), img: cold6, nameFood: 'Фланк', weight: '400гр', about: 'Ароматный, сочный, пряный фланк.', price: '35c' },
+    { id: crypto.randomUUID(), img: cold3, nameFood: 'Куринный', weight: '250гр', about: 'Нежный, сочный, ароматный куриный шашлык.', price: '65c' },
+    { id: crypto.randomUUID(), img: cold4, nameFood: 'Стейк', weight: '330гр', about: 'Сочный, нежный, ароматный стейк.', price: '48c' },
+    { id: crypto.randomUUID(), img: cold5, nameFood: 'Т-боун', weight: '240гр', about: 'Аппетитный, сочный, горячий Т-боун.', price: '53c' },
+    { id: crypto.randomUUID(), img: cold6, nameFood: 'Фланк', weight: '400гр', about: 'Ароматный, сочный, пряный фланк.', price: '46c' },
     { id: crypto.randomUUID(), img: cold8, nameFood: 'Портерхаус', weight: '330гр', about: 'Богатый, сочный, роскошный Портерхаус.', price: '35c' },
   ];
 
