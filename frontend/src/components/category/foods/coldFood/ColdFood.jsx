@@ -17,7 +17,7 @@ export default function ColdFood({ coldFood }) {
         <p>{coldFood.about}</p>
         <div className='flex justify-between items-center py-2'>
           <h2 className='text-3xl font-bold'>{coldFood.price}</h2>
-          <Link to="/Trash" onClick={()=>dispatch(addProduct(coldFood))}>
+          <Link to='trash' onClick={()=>dispatch(addProduct(coldFood))}>
           <button  className='bg-green-400 text-white  rounded-lg flex gap-2 items-center p-2'>В корзину <TiShoppingCart/></button>
           </Link>
         </div>
