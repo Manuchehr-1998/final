@@ -10,17 +10,18 @@ import Dish from './Dish'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom'
 
 export default function Dishs() {
 
     const dishs = [
-        { id: crypto.randomUUID(), img: cold1, nameFood: 'Цезарь', weight: '330гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold2, nameFood: 'Стейк', weight: '400гр', about: 'lorem', price: '60c' },
-        { id: crypto.randomUUID(), img: cold3, nameFood: 'Витаминный', weight: '250гр', about: 'lorem', price: '28c' },
-        { id: crypto.randomUUID(), img: cold4, nameFood: 'Брускетта', weight: '330гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold5, nameFood: 'Коул Слоу', weight: '240гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold6, nameFood: 'Хумус', weight: '400гр', about: 'lorem', price: '35c' },
-        { id: crypto.randomUUID(), img: cold8, nameFood: 'Капрезе', weight: '330гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold1, nameFood: 'Эклер', weight: '330гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold2, nameFood: 'Лобстер', weight: '400гр', about: 'lorem', price: '60c' },
+        { id: crypto.randomUUID(), img: cold3, nameFood: 'Тако', weight: '250гр', about: 'lorem', price: '28c' },
+        { id: crypto.randomUUID(), img: cold4, nameFood: 'Фондю', weight: '330гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold5, nameFood: 'Карри', weight: '240гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold6, nameFood: 'Фалафель', weight: '400гр', about: 'lorem', price: '35c' },
+        { id: crypto.randomUUID(), img: cold8, nameFood: 'Димсам', weight: '330гр', about: 'lorem', price: '35c' },
     ];
 
 
@@ -46,7 +47,9 @@ export default function Dishs() {
         <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
             <Slider {...settings}>
                 {dishs.map((dish) => (
-                    <Dish dish={dish} key={dish.id}/>
+                    <Link to={`/CardProduct/${dish.id}`}>
+                        <Dish dish={dish} key={dish.id} />
+                    </Link>
                 ))}
             </Slider>
         </div>)

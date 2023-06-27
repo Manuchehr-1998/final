@@ -10,17 +10,18 @@ import Soup from './Soup'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom'
 
 export default function Soups() {
 
   const soups = [
-    { id: crypto.randomUUID(), img: cold1, nameFood: 'Томатный', weight: '1 порция', about: 'lorem', price: '28c' },
-    { id: crypto.randomUUID(), img: cold2, nameFood: 'Куринный', weight: '1 порция', about: 'lorem', price: '37c' },
-    { id: crypto.randomUUID(), img: cold3, nameFood: 'Борщ', weight: '1 порция', about: 'lorem', price: '18c' },
-    { id: crypto.randomUUID(), img: cold4, nameFood: 'Фасолевый', weight: '1 порция', about: 'lorem', price: '42c' },
-    { id: crypto.randomUUID(), img: cold5, nameFood: 'Французский', weight: '1 порция', about: 'lorem', price: '23c' },
-    { id: crypto.randomUUID(), img: cold6, nameFood: 'Харчо', weight: '1 порция', about: 'lorem', price: '35c' },
-    { id: crypto.randomUUID(), img: cold8, nameFood: 'Минестроне', weight: '1 порция', about: 'lorem', price: '26c' },
+    { id: crypto.randomUUID(), img: cold1, nameFood: 'Томатный', weight: '1 порция', about: 'Ароматный, горячий, сытный томатный суп.', price: '28c' },
+    { id: crypto.randomUUID(), img: cold2, nameFood: 'Куринный', weight: '1 порция', about: 'Питательный, ароматный, утоляющий куринный суп.', price: '37c' },
+    { id: crypto.randomUUID(), img: cold3, nameFood: 'Борщ', weight: '1 порция', about: 'Богатый, насыщенный, традиционный борщ.', price: '18c' },
+    { id: crypto.randomUUID(), img: cold4, nameFood: 'Фасолевый', weight: '1 порция', about: 'Сытый, питательный, ароматный фасолевый суп.', price: '42c' },
+    { id: crypto.randomUUID(), img: cold5, nameFood: 'Французский', weight: '1 порция', about: 'Изысканный, нежный, ароматный французский суп.', price: '23c' },
+    { id: crypto.randomUUID(), img: cold6, nameFood: 'Харчо', weight: '1 порция', about: 'Острый, ароматный, пикантный харчо.', price: '35c' },
+    { id: crypto.randomUUID(), img: cold8, nameFood: 'Минестроне', weight: '1 порция', about: 'Сочный, овощной, томатный Минестроне суп.', price: '26c' },
   ];
 
 
@@ -46,7 +47,9 @@ export default function Soups() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {soups.map((soup) => (
-          <Soup soup={soup} key={soup.id}/>
+         <Link to={`/CardProduct/${soup.id}`}>
+         <Soup soup={soup} key={soup.id} />
+         </Link>       
         ))}
       </Slider>
     </div>)

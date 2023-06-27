@@ -10,6 +10,7 @@ import Fish from './Fish'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom'
 
 export default function Fishs() {
 
@@ -46,7 +47,9 @@ export default function Fishs() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {fishs.map((fish) => (
-          <Fish fish={fish}  key={fish.id}/>
+          <Link to={`/CardProduct/${fish.id}`}>
+            <Fish fish={fish} key={fish.id} />
+          </Link>
         ))}
       </Slider>
     </div>)
