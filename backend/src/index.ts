@@ -1,11 +1,16 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import multer from "multer";
 import MeatDishesRoutes from "./routes/MeatDishehRoutes";
 import FishDishesRoutes from "./routes/FishDishesRoutes";
-import BeveragesRoutes from "./routes/BeveragesRoutes";
+import BeveragesRoutes from "./routes/DrinksRoutes";
+
+const storage = multer.memoryStorage();
+export const uploadExport = multer({ storage: storage });
+
 const app = express();
-const port = 3003;
+const port = 3002;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

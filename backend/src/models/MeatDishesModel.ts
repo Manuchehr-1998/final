@@ -1,14 +1,16 @@
+import { query } from "express";
 import { pool } from "../db";
 import { DishesTypes } from "../types";
-export class FishDishesModel {
-  // Send fish dishes
-  static async getFishDishes(): Promise<DishesTypes[]> {
-    const result = await pool.query("SELECT * FROM fish_dishes");
+
+export class MeatDishesModel {
+  // Send meat dishes
+  static async getMeatDishes(): Promise<DishesTypes[]> {
+    const result = await pool.query("SELECT * FROM meat_dishes");
     return result.rows;
   }
 
-  // Add new fish dishes
-  static async AddFishDishes(
+  // Add new meat dishes
+  static async AddMeatDishes(
     name: string,
     price: number,
     description: string,
@@ -17,7 +19,7 @@ export class FishDishesModel {
   ): Promise<void> {
     try {
       const query = {
-        text: "INSERT INTO fish_dishes (name, price, description, weight, photo) VALUES ($1, $2, $3, $4, $5)",
+        text: "INSERT INTO meat_dishes (name, price, description, weight, photo )VALUES ($1, $2, $3, $4, $5)",
         values: [name, price, description, weight, photo],
       };
       await pool.query(query);
@@ -26,10 +28,10 @@ export class FishDishesModel {
     }
   }
 
-  // Delete fish dish
-  static async DeleteFishDishByid(id: number) {
+  //  Delete meat dishes
+  static async DeleteMeatDishes(id: number) {
     try {
-      const result = await pool.query("DELETE FROM fish_dishes WHERE id = $1", [
+      const result = await pool.query("DELETE FROM meat_dishes WHERE id = $1", [
         id,
       ]);
       return result.rowCount;
@@ -39,8 +41,8 @@ export class FishDishesModel {
     }
   }
 
-  // Edit fish dish by id
-  static async EditFishdish(
+  // Edit meat dishes
+  static async EditMeatDish(
     id: number,
     name: string,
     price: number,
@@ -50,7 +52,7 @@ export class FishDishesModel {
   ): Promise<void> {
     try {
       const query = {
-        text: "UPDATE fish_dishes SET name = $2, price = $3, description = $4, weight = $5, photo = $6 WHERE id = $1",
+        text: "UPDATE meat_dishes SET name = $2, price = $3, description = $4, weight = $5, photo = $6 WHERE id = $1",
         values: [id, name, price, description, weight, photo],
       };
       await pool.query(query);

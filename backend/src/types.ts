@@ -1,7 +1,5 @@
-import { type } from "os";
-
 export type DishesTypes = {
-  id: string;
+  id: number;
   name: string;
   price: number;
   weight: number;
@@ -9,11 +7,19 @@ export type DishesTypes = {
   photo: Buffer;
 };
 
-export type Beverages = {
-  id: string;
+export type AddDishesTypes = {
   name: string;
   price: number;
-  descriprion: string;
+  description: string;
+  weight: number;
+  photo: string;
+};
+
+export type DrinksTypes = {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
   quantity: number;
   photo: Buffer;
 };

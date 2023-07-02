@@ -14,13 +14,13 @@ import { Link } from 'react-router-dom';
 
 export default function ColdFoods() {
   const coldFoods = [
-    { id: crypto.randomUUID(), img: cold1, nameFood: 'Цезарь', weight: '330гр', about: 'lorem', price: '35c' },
-    { id: crypto.randomUUID(), img: cold2, nameFood: 'Стейк', weight: '400гр', about: 'lorem', price: '60c' },
-    { id: crypto.randomUUID(), img: cold3, nameFood: 'Витаминный', weight: '250гр', about: 'lorem', price: '28c' },
-    { id: crypto.randomUUID(), img: cold4, nameFood: 'Брускетта', weight: '330гр', about: 'lorem', price: '35c' },
-    { id: crypto.randomUUID(), img: cold5, nameFood: 'Коул Слоу', weight: '240гр', about: 'lorem', price: '35c' },
-    { id: crypto.randomUUID(), img: cold6, nameFood: 'Хумус', weight: '400гр', about: 'lorem', price: '35c' },
-    { id: crypto.randomUUID(), img: cold8, nameFood: 'Капрезе', weight: '330гр', about: 'lorem', price: '35c' },
+    { id: crypto.randomUUID(), img: cold1, nameFood: 'Цезарь', weight: '330гр', about: 'Свежий, сытный, классический цезарь.', price: '35c' },
+    { id: crypto.randomUUID(), img: cold2, nameFood: 'Стейк', weight: '400гр', about: 'Сочный, нежный, ароматный стейк.', price: '60c' },
+    { id: crypto.randomUUID(), img: cold3, nameFood: 'Витаминный', weight: '250гр', about: 'Свежий, цветочный, освежающий витаминный салат.', price: '28c' },
+    { id: crypto.randomUUID(), img: cold4, nameFood: 'Брускетта', weight: '330гр', about: 'Хрустящая, ароматная, сочная брускетта.', price: '46c' },
+    { id: crypto.randomUUID(), img: cold5, nameFood: 'Коул Слоу', weight: '240гр', about: 'Свежий, хрустящий, сбалансированный Коул Слоу.', price: '32c' },
+    { id: crypto.randomUUID(), img: cold6, nameFood: 'Хумус', weight: '400гр', about: 'Нежный, ароматный, питательный хумус.', price: '27c' },
+    { id: crypto.randomUUID(), img: cold8, nameFood: 'Капрезе', weight: '330гр', about: 'Свежий, летний, простой капрезе.', price: '42c' },
   ];
 
   const settings = {
@@ -45,9 +45,8 @@ export default function ColdFoods() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {coldFoods.map((coldFood) => (
-          <Link to={`/CardProduct/${coldFood.id}`}>
           <ColdFood coldFood={coldFood} key={coldFood.id} />
-          </Link>
+        
         ))}
       </Slider>
     </div>
