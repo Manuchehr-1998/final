@@ -45,9 +45,8 @@ export default function ColdFoods() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {coldFoods.map((coldFood) => (
-          <Link to={`/CardProduct/${coldFood.id}`}>
           <ColdFood coldFood={coldFood} key={coldFood.id} />
-          </Link>
+        
         ))}
       </Slider>
     </div>

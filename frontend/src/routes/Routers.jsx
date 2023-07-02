@@ -3,6 +3,7 @@ import { lazy } from "react";
 
 export const Layout =lazy(()=> import("../components/Layout/Layout"))
 export const Home =lazy(()=> import("../pages/Home"))
+export const Menu =lazy(()=> import("../components/category/menu/Menu"))
 export const CardProduct =lazy(()=> import("../components/category/CardProduct"))
 export const OrderTable =lazy(()=> import("../components/category/dishesOrder/OrderTable"))
 export const Condition =lazy(()=> import("../components/category/order/Condition"))

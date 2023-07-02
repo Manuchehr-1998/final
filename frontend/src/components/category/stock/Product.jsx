@@ -21,7 +21,7 @@ export default function Product() {
       {stocks.map((stock) => (
         <div className='text-white w-[30%] rounded-xl p-3'>
           <img src={stock.img} alt="" />
-          <div className='p-2 bg-gray-800 w-[80%]'>
+          <div className='p-2 bg-gray-800 w-[100%]'>
             <p className='font-bold'>{stock.name}</p>
             <p className='w-[80%] text-gray-400'>{stock.about}</p>
             <p className='text-green-400'>{stock.date}</p>

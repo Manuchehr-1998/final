@@ -30,7 +30,7 @@ export default function MeatFoods() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
@@ -47,9 +47,7 @@ export default function MeatFoods() {
     <div className="w-full h-full bg-[#403C3B] overflow-hidden px-8">
       <Slider {...settings}>
         {meatFoods.map((meatFood) => (
-          <Link to={`/CardProduct/${meatFood.id}`}>
             <MeatFood meatFood={meatFood} key={meatFood.id} />
-          </Link>
         ))}
       </Slider>
     </div>)

@@ -12,6 +12,7 @@ import Drinks from "./components/category/foods/drink/Drinks";
 import Fishs from "./components/category/foods/fish/Fishs";
 import MeatFoods from "./components/category/foods/meatFood/MeatFoods";
 import Grills from "./components/category/foods/grill/Grills";
+import Menu from "./components/category/menu/Menu";
 
 
 
@@ -29,6 +30,11 @@ function App() {
             <Route index element={
               <Suspense fallback={<Loader />}>
                 <Home />
+              </Suspense>
+            } />
+             <Route path="Menu" element={
+              <Suspense fallback={<Loader />}>
+                <Menu />
               </Suspense>
             } />
             <Route path="CardProduct/:id" element={
