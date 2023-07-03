@@ -17,7 +17,7 @@ export default class DrinksController {
     };
   }
 
-  static addDrinkks() {
+  static addDrinks() {
     return [
       upload.single("photo"),
       async (req: any, res: Response) => {
