@@ -1,15 +1,14 @@
 import { pool } from "../db";
 import { DishesTypes } from "../types";
 
-export class MeatDishesModel {
-  // Send meat dishes
-  static async getMeatDishes(): Promise<DishesTypes[]> {
-    const result = await pool.query("SELECT * FROM meat_dishes");
+export class ColdAppetizersModel {
+  static async getColdAppetizers(): Promise<DishesTypes[]> {
+    const result = await pool.query("SELECT FROM cold_appetizers");
     return result.rows;
   }
 
-  // Add new meat dish
-  static async AddMeatDish(
+   // Add new cold apptizers
+   static async AddColdAppetizer(
     name: string,
     price: number,
     description: string,
@@ -18,7 +17,7 @@ export class MeatDishesModel {
   ): Promise<void> {
     try {
       const query = {
-        text: "INSERT INTO meat_dishes (name, price, description, weight, photo )VALUES ($1, $2, $3, $4, $5)",
+        text: "INSERT INTO cold_appetizers (name, price, description, weight, photo )VALUES ($1, $2, $3, $4, $5)",
         values: [name, price, description, weight, photo],
       };
       await pool.query(query);
@@ -27,10 +26,10 @@ export class MeatDishesModel {
     }
   }
 
-  //  Delete meat dish
-  static async DeleteMeatDish(id: number) {
+  //  Delete cold apptizers
+  static async DeleteColdAppetizer(id: number) {
     try {
-      const result = await pool.query("DELETE FROM meat_dishes WHERE id = $1", [
+      const result = await pool.query("DELETE FROM cold_appetizers WHERE id = $1", [
         id,
       ]);
       return result.rowCount;
@@ -40,8 +39,8 @@ export class MeatDishesModel {
     }
   }
 
-  // Edit meat dish
-  static async EditMeatDish(
+  // Edit cold apptizers
+  static async EditColdAppetizer(
     id: number,
     name: string,
     price: number,
@@ -51,7 +50,7 @@ export class MeatDishesModel {
   ): Promise<void> {
     try {
       const query = {
-        text: "UPDATE meat_dishes SET name = $2, price = $3, description = $4, weight = $5, photo = $6 WHERE id = $1",
+        text: "UPDATE cold_appetizers SET name = $2, price = $3, description = $4, weight = $5, photo = $6 WHERE id = $1",
         values: [id, name, price, description, weight, photo],
       };
       await pool.query(query);

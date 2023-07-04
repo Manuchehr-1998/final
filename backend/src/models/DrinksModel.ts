@@ -8,7 +8,7 @@ export class DrinksModel {
     return result.rows;
   }
 
-  static async AddDrinks(
+  static async AddDrink(
     name: string,
     price: number,
     description: string,

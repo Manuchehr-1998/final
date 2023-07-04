@@ -1,67 +1,68 @@
-import { MeatDishesModel } from "../models/MeatDishesModel";
+import { ColdAppetizersModel } from "../models/ColdAppetizersModel";
 import { Request, Response } from "express";
+
 import multer from "multer";
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-export default class MeatDishesController {
-  static getAllMeatDishes() {
+export default class ColdAppetizersController {
+  static getAllColdAppetizers() {
     return async (req: Request, res: Response) => {
       try {
-        const list = await MeatDishesModel.getMeatDishes();
+        const list = await ColdAppetizersModel.getColdAppetizers()
         return res.json(list);
       } catch (error) {
         console.error(error);
-        return res.status(500).json({ error: "Failed to get meat dishes" });
+        return res.status(500).json({ error: "Failed to get Cold appetizers" });
       }
     };
   }
 
-  static addMeatDish() {
+  static addColdAppetizer() {
     return [
       upload.single("photo"),
       async (req: any, res: Response) => {
         const { name, price, description, weight } = req.body;
         try {
-          await MeatDishesModel.AddMeatDish(
+          await ColdAppetizersModel.AddColdAppetizer(
             name,
             price,
             description,
             weight,
             req.file.buffer
           );
-          return res.status(201).json("Meat dish added successfully");
+          return res.status(201).json("Cold appetizer added successfully");
         } catch (error) {
           console.error(error);
-          return res.status(500).json("Failed to add meat dish");
+          return res.status(500).json("Failed to add cold appetizer");
         }
       },
     ];
   }
 
-  static async deleteMeatDish(req: any, res: Response) {
+  static async deleteColdAppetizer(req: any, res: Response) {
     const { id } = req.params;
     try {
-      const deleteRowCount = await MeatDishesModel.DeleteMeatDish(id);
+      const deleteRowCount = await ColdAppetizersModel.DeleteColdAppetizer(id);
       if (deleteRowCount === 0) {
-        return res.status(404).json("Meat dish not found");
+        return res.status(404).json("Cold appetizers not found");
       } else {
-        return res.status(200).json("Meat dish deleted successfully");
+        return res.status(200).json("Cold appetizer deleted successfully");
       }
     } catch (error) {
       console.error(error);
-      return res.status(500).json("Failed to delete meat dish");
+      return res.status(500).json("Failed to delete cold appetizer");
     }
   }
 
-  static editMeatDish() {
+  static editColdAppetizer() {
     return [
       upload.single("photo"),
       async (req: any, res: Response) => {
         const { id, name, price, description, weight } = req.body;
         try {
-          await MeatDishesModel.EditMeatDish(
+          await ColdAppetizersModel.EditColdAppetizer(
             id,
             name,
             price,
@@ -69,10 +70,10 @@ export default class MeatDishesController {
             weight,
             req.file.buffer
           );
-          return res.status(200).json("Meat dish edited successfully");
+          return res.status(200).json("Cold appetizer edited successfully");
         } catch (error) {
           console.error(error);
-          res.status(500).json("Failed to edit meat dish");
+          res.status(500).json("Failed to edit Cold appetizer");
         }
       },
     ];

@@ -17,13 +17,13 @@ export default class DrinksController {
     };
   }
 
-  static addDrinks() {
+  static addDrink() {
     return [
       upload.single("photo"),
       async (req: any, res: Response) => {
         const { name, price, description, quantity } = req.body;
         try {
-          await DrinksModel.AddDrinks(
+          await DrinksModel.AddDrink(
             name,
             price,
             description,
@@ -54,7 +54,7 @@ export default class DrinksController {
     }
   }
 
-  static editDrinks() {
+  static editDrink() {
     return [
       upload.single("photo"),
       async (req: any, res: Response) => {
