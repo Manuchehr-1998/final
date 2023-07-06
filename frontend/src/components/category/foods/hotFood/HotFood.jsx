@@ -2,13 +2,12 @@ import React from "react";
 import { TiShoppingCart } from "react-icons/ti";
 import { addProduct } from "../../../../Reduser/basket";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 
 export default function HotFood({ hotFood }) {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-white  border-2 p-4 rounded-xl bg-gray-800 m-3">
+      <div className="text-white   p-4 rounded-xl bg-gray-800 m-3">
         <img
           src={hotFood.img}
           className="w-[100%] h-[30vh] rounded-lg"

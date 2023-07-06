@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <nav className="bg-[#403C3B] fixed top-0 z-50 border-gray-200 w-[100%]">
-      <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">
+      <div className="flex flex-wrap items-center justify-around w-[100%]  m-auto p-4 xs:hidden">
         <Link to="/">
           <div>
             <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
@@ -59,7 +59,7 @@ const Header = () => {
           </div>
           <div className="flex w-[100%] items-center">
             <button className="bg-green-400 rounded-full w-8 h-8 flex items-center justify-center">
-              <img src={Calling} alt="" />
+              <img src={Calling} alt="phone" />
             </button>
             <div className="ml-2  ">
               <p className="text-[#CFCFCF]">Контакты:</p>
@@ -85,11 +85,10 @@ const Header = () => {
             </div>
           )}
           <div className="h-8 w-0.5 bg-white hidden sm:block"></div>
-         
-            <span className="rounded-full bg-white text-black w-4 h-4 flex items-center justify-center px-1">
-              {totalItems}
-            </span>
-          
+
+          <span className="rounded-full bg-white text-black w-4 h-4 flex items-center justify-center px-1">
+            {totalItems}
+          </span>
         </div>
       </div>
       {/* MEdiy */}
@@ -98,7 +97,9 @@ const Header = () => {
           <img src={burger} alt="" />
         </div>
         <div className="xs:w-[30%]">
-          <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          <Link to="/">
+            <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          </Link>
         </div>
         <div className="xs:flex xs:flex-wrap xs:gap-4 xs:justify-center xs:items-center bg-green-400 p-1 rounded-2xl w-[30%]">
           <img src={Buy} alt="" />

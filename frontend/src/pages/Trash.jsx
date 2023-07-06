@@ -27,15 +27,15 @@ const Trash = () => {
   };
 
   return (
-    <div className="w-[100%] m-auto bg-[#403C3B]">
-      <div className="h-[80vh] m-auto w-[95%] items-center pt-20">
+    <div className="w-[100%] h-[100vh] m-auto bg-[#403C3B]">
+      <div className="h-[100vh] m-auto w-[95%] items-center pt-20">
         <div className="flex gap-4 justify-center items-center">
           <h2 className="text-green-400">в корзине: {totalItems} товаров</h2>
         </div>
         {basket.map((elem) => (
           <div
             key={elem.product.id}
-            className="p-4 text-brown-50  rounded-lg mb-4 shadow-md"
+            className="p-4 text-brown-50 rounded-lg mb-4 shadow-md w-[80%] m-auto"
           >
             <div className="flex justify-between items-center">
               <div>
@@ -52,25 +52,25 @@ const Trash = () => {
               <div className="flex gap-3 items-center">
                 <button
                   onClick={() => dispatch(incProduct(elem.product.id))}
-                  className="text-white bg-green-400 rounded-full p-2 p-2 w-10 h-10 top-4 left-12"
+                  className="text-white bg-green-400 rounded-full w-10 h-10"
                 >
-                  +
+                  <p className=" pb-1">+</p>
                 </button>
                 <span className="text-xl">{elem.quantity}</span>
                 <button
                   onClick={() => dispatch(decProduct(elem.product.id))}
-                  className="text-white bg-green-400 rounded-full p-2  p-2 w-10 h-10 top-4 left-12"
+                  className="text-white bg-green-400 rounded-full w-10 h-10"
                 >
-                  -
+                  <p className=" pb-1">-</p>
                 </button>
               </div>
-              <div>{elem.product.price} сомони</div>
+              <div>{elem.product.price}</div>
               <div>
                 <span
                   onClick={() => dispatch(removeProduct(elem.product.id))}
                   className="cursor-pointer"
                 >
-                  <AiFillDelete className="text-green-400" />
+                  <AiFillDelete className="text-green-400 w-7 h-11" />
                 </span>
               </div>
             </div>

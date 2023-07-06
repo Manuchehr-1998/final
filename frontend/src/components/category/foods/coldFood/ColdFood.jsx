@@ -7,7 +7,7 @@ export default function ColdFood({ coldFood }) {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-white  border-2 p-4 rounded-xl bg-gray-800 m-3">
+      <div className="text-white  p-4 rounded-2xl bg-gray-800 m-3">
         <img
           src={coldFood.img}
           className="w-[100%] h-[30vh] rounded-lg"
