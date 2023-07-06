@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../assets/LOGO.png";
 import { FaArrowUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
 
   const handleScrollToTop = () => {
@@ -29,9 +31,9 @@ export default function Footer() {
       </div>
       <div className="flex pl-6 gap-11 text-[20px] xs:hidden">
         <a href="a" className="hover:text-green-400">О ресторане</a>
-        <a href="a" className="hover:text-green-400">Условия доставки</a>
+        <Link to='Conditions'><a href="stock" className="hover:text-green-400">Условия доставки</a></Link>
         <a href="a" className="hover:text-green-400">Возврат товара</a>
-        <a href="a" className="hover:text-green-400">Акция</a>
+        <Link to='Stock'><a href="stock" className="hover:text-green-400">Акция</a></Link>
       </div>
     </div>
   );

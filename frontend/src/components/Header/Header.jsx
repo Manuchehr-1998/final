@@ -1,25 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/LOGO.png";
 import Calling from "../../assets/Calling.svg";
 import burger from "../../assets/burger.svg";
 import Buy from "../../assets/Buy.svg";
 import ModalBasked from "./Modal";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const basket = useSelector(({ basket }) => basket.basket);
+  const [totalItems, setTotalItems] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    basket.forEach((elem) => {
+      count += elem.quantity;
+    });
+    setTotalItems(count);
+  }, [basket]);
 
   const handleModalClick = () => {
     setModalOpen(!modalOpen);
   };
 
   return (
-    <nav className="bg-[#403C3B] border-gray-200 w-[100%]">
-      <div className="flex flex-wrap items-center justify-around w-[95%]  m-auto p-4 xs:hidden">
-        <Link to='/'>
-        <div>
-          <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
-        </div>
+    <nav className="bg-[#403C3B] fixed top-0 z-50 border-gray-200 w-[100%]">
+      <div className="flex flex-wrap items-center justify-around w-[100%]  m-auto p-4 xs:hidden">
+        <Link to="/">
+          <div>
+            <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          </div>
         </Link>
         <div className="flex w-[80%] items-center">
           <div className="relative  w-full">
@@ -48,7 +59,7 @@ const Header = () => {
           </div>
           <div className="flex w-[100%] items-center">
             <button className="bg-green-400 rounded-full w-8 h-8 flex items-center justify-center">
-              <img src={Calling} alt="" />
+              <img src={Calling} alt="phone" />
             </button>
             <div className="ml-2  ">
               <p className="text-[#CFCFCF]">Контакты:</p>
@@ -57,27 +68,38 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center gap-3 bg-green-400 p-2 rounded-lg">
-          <button className="text-white" onClick={handleModalClick}>
-            Корзина
-          </button>
-          {modalOpen && (
+          {totalItems > 0 ? (
+            <Link to="/Trash">
+              <button className="text-white" onClick={handleModalClick}>
+                Корзина
+              </button>
+            </Link>
+          ) : (
+            <button className="text-white" onClick={handleModalClick}>
+              Корзина
+            </button>
+          )}
+          {modalOpen && totalItems === 0 && (
             <div className={`modal z-50 w-[50%] ${modalOpen ? "animate" : ""}`}>
               <ModalBasked />
             </div>
           )}
           <div className="h-8 w-0.5 bg-white hidden sm:block"></div>
+
           <span className="rounded-full bg-white text-black w-4 h-4 flex items-center justify-center px-1">
-            0
+            {totalItems}
           </span>
         </div>
       </div>
       {/* MEdiy */}
       <div className="xs:flex xs:flex-wrap xs:items-center xs:gap-2 justify-around xs:w-[95%]  xs:m-auto xs:p-4  hidden">
         <div className="w-[30%] p-2">
-         <img src={burger} alt="" />
+          <img src={burger} alt="" />
         </div>
         <div className="xs:w-[30%]">
-          <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          <Link to="/">
+            <img src={logo} className="h-12 mr-3" alt="Flowbite Logo" />
+          </Link>
         </div>
         <div className="xs:flex xs:flex-wrap xs:gap-4 xs:justify-center xs:items-center bg-green-400 p-1 rounded-2xl w-[30%]">
           <img src={Buy} alt="" />
