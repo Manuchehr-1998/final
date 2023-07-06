@@ -23,3 +23,11 @@ export type DrinksTypes = {
   quantity: number;
   photo: Buffer;
 };
+
+export type OrderHistoryTypes = {
+  street: string;
+  comment: string;
+  order: any;
+  date: string;
+  sum: number;
+};
