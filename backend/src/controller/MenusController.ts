@@ -6,12 +6,33 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 export default class MenusController {
+  // Send all menus
+  static getAllMenus() {
+    return async (req: Request, res: Response) => {
+      try {
+        const list = await MenusModel.getMenus();
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Menus not found" });
+        }
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Failed to get menus" });
+      }
+    };
+  }
+
   // Send cold appetizers
   static getAllColdAppetizers() {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getColdAppetizers();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Cold appetizers not found" });
+        }
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Failed to get Cold appetizers" });
@@ -24,7 +45,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getHotAppetizers();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Hot appetizers not found" });
+        }
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Failed to get hot appetizers" });
@@ -37,7 +62,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getDrinks();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Driks not found" });
+        }
       } catch (error) {
         return res.status(500).json({ error: "Failed to get drinks" });
       }
@@ -49,7 +78,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getGrills();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Grills not found" });
+        }
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Failed to get grills" });
@@ -62,7 +95,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getMeatDishes();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Meat dishes not found" });
+        }
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Failed to get meat dishes" });
@@ -75,7 +112,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getFishDishes();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Fish dishes not found" });
+        }
       } catch (error) {
         return res.status(500).json({ error: "Failed to get Fish dishes" });
       }
@@ -87,7 +128,11 @@ export default class MenusController {
     return async (req: Request, res: Response) => {
       try {
         const list = await MenusModel.getSignatureDishes();
-        return res.json(list);
+        if (list.length !== 0) {
+          return res.json(list);
+        } else {
+          return res.status(404).json({ error: "Signature dishes not found" });
+        }
       } catch (error) {
         console.error(error);
         return res
@@ -101,8 +146,12 @@ export default class MenusController {
   static getAllSoups() {
     return async (req: Request, res: Response) => {
       try {
-        const list = await MenusModel.getSoups();
-        return res.json(list);
+        const soups = await MenusModel.getSoups();
+        if (soups.length !== 0) {
+          return res.json(soups);
+        } else {
+          return res.status(404).json({ error: "Soups not found" });
+        }
       } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Failed to get soups" });
@@ -134,7 +183,7 @@ export default class MenusController {
 
   // Delete dish by id
   static async deleteDishById(req: any, res: Response) {
-    const { id } = req.params;
+    const { id } = req.query;
     try {
       const deleteRowCount = await MenusModel.DeleteDishById(id);
       if (deleteRowCount === 0) {

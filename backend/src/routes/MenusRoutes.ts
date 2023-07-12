@@ -3,7 +3,10 @@ import MenusController from "../controller/MenusController";
 
 const router = express.Router();
 
-// Send all menus
+// Send menus
+router.get("/menus", MenusController.getAllMenus());
+
+// Filter menus
 router.get("/cold-appetizers", MenusController.getAllColdAppetizers());
 router.get("/hot-appetizers", MenusController.getAllHotAppetizers());
 router.get("/drinks", MenusController.getAllDrinks());
@@ -15,7 +18,7 @@ router.get("/soups", MenusController.getAllSoups());
 
 // Add new dish
 router.post("/add-dish", MenusController.addDish);
-router.delete("/delete-dish/:id", MenusController.deleteDishById);
-router.post("/edit-dish", MenusController.editDish());
+router.delete("/delete-dish", MenusController.deleteDishById);
+router.put("/edit-dish", MenusController.editDish());
 
 export = router;

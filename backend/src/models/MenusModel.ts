@@ -2,11 +2,26 @@ import { pool } from "../db";
 import { DishesTypes } from "../types";
 
 export class MenusModel {
+  // Send all dishes
+  static async getMenus(): Promise<DishesTypes[]> {
+    const result = await pool.query("SELECT * FROM menus");
+
+    if (result.rows.length === 0) {
+      throw new Error("Menus not found");
+    }
+    return result.rows;
+  }
+
   // Send cold appetizers
   static async getColdAppetizers(): Promise<DishesTypes[]> {
     const result = await pool.query(
       "SELECT * FROM menus WHERE type = 'cold_appetizer'"
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Cold appetizers not found");
+    }
+
     return result.rows;
   }
 
@@ -15,6 +30,11 @@ export class MenusModel {
     const result = await pool.query(
       "SELECT * FROM menus WHERE type = 'hot_appetizer'"
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Hot appetizers not found");
+    }
+
     return result.rows;
   }
 
@@ -23,20 +43,35 @@ export class MenusModel {
     const result = await pool.query(
       "SELECT * FROM menus WHERE type = 'drink' "
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Driks not found");
+    }
+
     return result.rows;
   }
 
   // Send grills
   static async getGrills(): Promise<DishesTypes[]> {
     const result = await pool.query("SELECT * FROM menus WHERE type = 'grill'");
+
+    if (result.rows.length === 0) {
+      throw new Error("Grills not found");
+    }
+
     return result.rows;
   }
 
   // Send meat dishes
   static async getMeatDishes(): Promise<DishesTypes[]> {
     const result = await pool.query(
-      "SELECT * FROM menus WHERE type = 'meat_dish' "
+      "SELECT * FROM menus WHERE type = 'meat_dish'"
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Meat dishes not found");
+    }
+
     return result.rows;
   }
 
@@ -45,6 +80,11 @@ export class MenusModel {
     const result = await pool.query(
       "SELECT * FROM menus WHERE type = 'fish_dish' "
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Fish dishes not found");
+    }
+
     return result.rows;
   }
 
@@ -53,12 +93,22 @@ export class MenusModel {
     const result = await pool.query(
       "SELECT * FROM menus WHERE type = 'signature_dish'"
     );
+
+    if (result.rows.length === 0) {
+      throw new Error("Signature dishes not found");
+    }
+
     return result.rows;
   }
 
   // Send soups
   static async getSoups(): Promise<DishesTypes[]> {
     const result = await pool.query("SELECT * FROM menus WHERE type = 'soup'");
+
+    if (result.rows.length === 0) {
+      throw new Error("Soups not found");
+    }
+
     return result.rows;
   }
 
@@ -79,6 +129,7 @@ export class MenusModel {
       await pool.query(query);
     } catch (error) {
       console.error(error);
+      throw error;
     }
   }
 
@@ -111,6 +162,7 @@ export class MenusModel {
       await pool.query(query);
     } catch (error) {
       console.error(error);
+      throw error;
     }
   }
 }

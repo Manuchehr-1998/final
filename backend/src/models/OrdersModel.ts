@@ -1,27 +1,28 @@
 import { pool } from "../db";
-import { OrderHistoryTypes } from "../types";
 
 export class OrdersModel {
   // Send Orders
-  static async getHistoryOfOrders(): Promise<OrderHistoryTypes[]> {
-    const result = await pool.query("SELECT FROM history_of_orders");
+  static async getHistoryOfOrders(): Promise<any> {
+    const result = await pool.query("SELECT FROM orders");
     return result.rows;
   }
 
   // Adding an order to the order history
   static async AddOrdertoHistory(
+    name: string,
+    phone: number,
     street: string,
+    homeNumber: number,
     comment: string,
-    order: any,
-    date: string,
     sum: number
   ) {
     try {
       const query = {
-        text: "INSERS INTO history_of_orders (street, comment, order, date, sum) VALUES ($1, $2, $3, $4, $5)",
-        values: [street, comment, order, date, sum],
+        text: "INSERS INTO orders (name, phone, street, homeNumber, comment, sum) VALUES ($1, $2, $3, $4, $5, $6)",
+        values: [name, phone, street, homeNumber, comment, sum],
       };
-      await pool.query(query);
+      const result = await pool.query(query);
+      return result.rows;
     } catch (error) {
       console.error(error);
     }
